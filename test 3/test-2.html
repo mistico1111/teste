@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Image Button</title>
+  </head>
+  <body>
+    <button id="myBtn">clicla aqui karai zoio</button>
+    <img id="myImg" style="display:none;" src="michael.jpg" alt="My Image 1">
+    <img id="myImg2" style="display:none;" src="art.jpg" alt="My Image 2">
+    <img id="myImg3" style="display:none;" src="chavinho.png" alt="My Image 3">
+    <script>
+      var btn = document.getElementById("myBtn");
+      var img1 = document.getElementById("myImg");
+      var img2 = document.getElementById("myImg2");
+      var img3 = document.getElementById("myImg3");
+      var currentImg = 0;
+      btn.addEventListener("click", function() {
+        if(currentImg === 0){
+            img1.style.display = "block";
+            img2.style.display = "none";
+            img3.style.display = "none";
+            currentImg++;
+        }else if(currentImg === 1){
+            img1.style.display = "none";
+            img2.style.display = "block";
+            img3.style.display = "none";
+            currentImg++;
+        }else{
+            img1.style.display = "none";
+            img2.style.display = "none";
+            img3.style.display = "block";
+            currentImg = 0;
+        }
+      });
+    </script>
+  </body>
+</html>
+
+
+
